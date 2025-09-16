@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -15,6 +15,11 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Organic themed variants
+        organic: "bg-gradient-hero text-primary-foreground hover:shadow-natural hover:scale-105 transition-all duration-300",
+        kraft: "bg-kraft text-foreground hover:bg-kraft-dark hover:shadow-product transition-all duration-300",
+        beetroot: "bg-gradient-accent text-accent-foreground hover:shadow-hover hover:scale-105 transition-all duration-300",
+        natural: "bg-cream text-primary border border-kraft hover:bg-kraft hover:shadow-natural transition-all duration-300",
       },
       size: {
         default: "h-10 px-4 py-2",

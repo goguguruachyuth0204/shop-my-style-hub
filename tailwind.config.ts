@@ -47,6 +47,21 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Organic theme colors
+        kraft: {
+          DEFAULT: "hsl(var(--kraft))",
+          dark: "hsl(var(--kraft-dark))",
+        },
+        organic: {
+          DEFAULT: "hsl(var(--organic-green))",
+          light: "hsl(var(--organic-green-light))",
+        },
+        beetroot: {
+          DEFAULT: "hsl(var(--beetroot))",
+          light: "hsl(var(--beetroot-light))",
+        },
+        cream: "hsl(var(--cream))",
+        earth: "hsl(var(--earth))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -62,6 +77,19 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      backgroundImage: {
+        'gradient-organic': 'var(--gradient-organic)',
+        'gradient-hero': 'var(--gradient-hero)',
+        'gradient-accent': 'var(--gradient-accent)',
+      },
+      boxShadow: {
+        'natural': 'var(--shadow-natural)',
+        'product': 'var(--shadow-product)',
+        'hover': 'var(--shadow-hover)',
+      },
+      transitionProperty: {
+        'organic': 'var(--transition-organic)',
       },
       keyframes: {
         "accordion-down": {

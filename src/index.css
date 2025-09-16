@@ -2,41 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* BayLithos Organic Foods Design System - Natural & Premium */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Natural kraft paper background */
+    --background: 35 25% 96%;
+    --foreground: 85 30% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Card backgrounds with subtle warmth */
+    --card: 35 30% 98%;
+    --card-foreground: 85 30% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Popover styling */
+    --popover: 35 30% 98%;
+    --popover-foreground: 85 30% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary brand - Deep forest green */
+    --primary: 85 30% 20%;
+    --primary-foreground: 35 25% 96%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Warm kraft tones */
+    --secondary: 35 25% 85%;
+    --secondary-foreground: 85 30% 20%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted elements */
+    --muted: 35 20% 90%;
+    --muted-foreground: 85 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Rich burgundy from beetroot */
+    --accent: 345 60% 35%;
+    --accent-foreground: 35 25% 96%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive states */
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 35 25% 96%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Borders and inputs */
+    --border: 35 20% 85%;
+    --input: 35 20% 88%;
+    --ring: 85 30% 20%;
 
-    --radius: 0.5rem;
+    /* Border radius for organic feel */
+    --radius: 0.75rem;
+
+    /* Custom organic theme colors */
+    --kraft: 35 25% 80%;
+    --kraft-dark: 35 30% 65%;
+    --organic-green: 85 40% 25%;
+    --organic-green-light: 85 35% 35%;
+    --beetroot: 345 65% 40%;
+    --beetroot-light: 345 45% 55%;
+    --cream: 35 30% 94%;
+    --earth: 25 35% 70%;
+
+    /* Gradients */
+    --gradient-organic: linear-gradient(135deg, hsl(var(--kraft)), hsl(var(--cream)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--organic-green)), hsl(var(--organic-green-light)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--beetroot)), hsl(var(--beetroot-light)));
+
+    /* Shadows with organic feel */
+    --shadow-natural: 0 8px 32px -8px hsl(var(--organic-green) / 0.15);
+    --shadow-product: 0 12px 40px -10px hsl(var(--kraft-dark) / 0.25);
+    --shadow-hover: 0 16px 48px -12px hsl(var(--organic-green) / 0.2);
+
+    /* Transitions */
+    --transition-organic: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,41 +87,44 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode with natural warmth */
+    --background: 85 35% 8%;
+    --foreground: 35 25% 90%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 85 30% 12%;
+    --card-foreground: 35 25% 90%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 85 30% 12%;
+    --popover-foreground: 35 25% 90%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 35 25% 90%;
+    --primary-foreground: 85 30% 15%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 85 20% 18%;
+    --secondary-foreground: 35 25% 90%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 85 20% 18%;
+    --muted-foreground: 35 15% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 345 55% 45%;
+    --accent-foreground: 35 25% 90%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 65% 45%;
+    --destructive-foreground: 35 25% 90%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 85 20% 18%;
+    --input: 85 20% 18%;
+    --ring: 35 25% 80%;
+
+    /* Dark mode custom colors */
+    --kraft: 35 20% 25%;
+    --kraft-dark: 35 25% 20%;
+    --organic-green: 85 45% 35%;
+    --organic-green-light: 85 40% 45%;
+    --beetroot: 345 60% 50%;
+    --beetroot-light: 345 50% 60%;
+    --cream: 35 25% 15%;
+    --earth: 25 30% 30%;
   }
 }
 
